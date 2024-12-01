@@ -488,7 +488,7 @@ public class TitleScreenSystem : FSystem {
 
 	private IEnumerator GetLevelOrScenario_WebRequest(string uri)
 	{
-		UnityWebRequest www = UnityWebRequest.Get(uri);
+		UnityWebRequest www = UnityWebRequest.Get("file://"+uri);
 		yield return www.SendWebRequest();
 
 		if (www.result != UnityWebRequest.Result.Success)

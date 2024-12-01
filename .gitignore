@@ -44,5 +44,13 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# MacOS
+*.DS_Store
+
+# PersonalChanges
+*.vscode/
+*UserSettings/
+
+
 # Crashlytics generated file
 crashlytics-build.properties
