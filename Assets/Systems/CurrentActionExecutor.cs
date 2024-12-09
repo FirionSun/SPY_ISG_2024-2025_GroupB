@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using TMPro;
 using FYFY;
 
 /// <summary>
@@ -84,40 +86,118 @@ public class CurrentActionExecutor : FSystem {
 	private void onNewCurrentAction(GameObject currentAction) {
 		Pause = false; // activates onProcess to identify inactive robots
 		
-		CurrentAction ca = currentAction.GetComponent<CurrentAction>();	
-
-		// process action depending on action type
-		switch (currentAction.GetComponent<BasicAction>().actionType){
-			case BasicAction.ActionType.Forward:
-				ApplyForward(ca.agent);
-				break;
-			case BasicAction.ActionType.TurnLeft:
-				ApplyTurnLeft(ca.agent);
-				break;
-			case BasicAction.ActionType.TurnRight:
-				ApplyTurnRight(ca.agent);
-				break;
-			case BasicAction.ActionType.TurnBack:
-				ApplyTurnBack(ca.agent);
-				break;
-			case BasicAction.ActionType.Wait:
-				break;
-			case BasicAction.ActionType.Activate:
-				Position agentPos = ca.agent.GetComponent<Position>();
-				foreach ( GameObject actGo in f_activableConsole){
-					if(actGo.GetComponent<Position>().x == agentPos.x && actGo.GetComponent<Position>().y == agentPos.y){
-						actGo.GetComponent<AudioSource>().Play();
-						
-						//Ajouter ici le check porte avec variable + vérif de la condition
-						// toggle activable GameObject
-						if (actGo.GetComponent<TurnedOn>())
-							GameObjectManager.removeComponent<TurnedOn>(actGo);
+		CurrentAction ca = currentAction.GetComponent<CurrentAction>();
+        if (currentAction.GetComponent<BasicAction>()!=null) 
+		{ 
+			// process action depending on action type
+			switch (currentAction.GetComponent<BasicAction>().actionType){
+				case BasicAction.ActionType.Forward:
+					ApplyForward(ca.agent);
+					break;
+				case BasicAction.ActionType.TurnLeft:
+					ApplyTurnLeft(ca.agent);
+					break;
+				case BasicAction.ActionType.TurnRight:
+					ApplyTurnRight(ca.agent);
+					break;
+				case BasicAction.ActionType.TurnBack:
+					ApplyTurnBack(ca.agent);
+					break;
+				case BasicAction.ActionType.Wait:
+					break;
+				case BasicAction.ActionType.varInt:
+					//Add int variable processsing
+					if (ca.agent.GetComponent<robotMemory>())
+					{
+						if (!ca.agent.GetComponent<robotMemory>().memory.ContainsKey("int"))
+						{
+							Debug.Log("Not found in memo");
+							string s;
+							if (ca.GetComponentInChildren<TMP_InputField>().text == null)
+							{
+								Debug.Log("Maxvalue because no init " + int.MaxValue.ToString());
+								s = int.MaxValue.ToString();
+							}
+							else
+							{
+								s = ca.transform.GetComponentInChildren<TMP_InputField>().text;
+								Debug.Log("Value found " + s);
+							}
+							List<string> ls = new List<string>();
+							ls.Add(s);
+							Debug.Log("Added variable int of value " + s);
+							ca.agent.GetComponent<robotMemory>().memory.Add("int", ls);
+						}
 						else
-							GameObjectManager.addComponent<TurnedOn>(actGo);
+						{
+							Debug.Log("Found in memo");
+							string s;
+							if (ca.GetComponentInChildren<TMP_InputField>().text == null)
+							{
+								Debug.Log("Maxvalue because no init " + int.MaxValue.ToString());
+								s = int.MaxValue.ToString();
+							}
+							else
+							{
+								s = ca.transform.GetComponentInChildren<TMP_InputField>().text;
+								Debug.Log("Value found " + s);
+							}
+							List<string> ls = ca.GetComponent<robotMemory>().memory["int"];
+							ls.Add(s);
+							ca.agent.GetComponent<robotMemory>().memory.Add("int", ls);
+						}
 					}
-				}
-				ca.agent.GetComponent<Animator>().SetTrigger("Action");
-				break;
+					break;
+				case BasicAction.ActionType.Activate:
+					Position agentPos = ca.agent.GetComponent<Position>();
+					foreach ( GameObject actGo in f_activableConsole){
+						if(actGo.GetComponent<Position>().x == agentPos.x && actGo.GetComponent<Position>().y == agentPos.y){
+							actGo.GetComponent<AudioSource>().Play();
+						
+							//Ajouter ici le check porte avec variable + vérif de la condition
+							// toggle activable GameObject
+							if (actGo.GetComponent<TurnedOn>())
+								GameObjectManager.removeComponent<TurnedOn>(actGo);
+							else
+								GameObjectManager.addComponent<TurnedOn>(actGo);
+						}
+					}
+					ca.agent.GetComponent<Animator>().SetTrigger("Action");
+					break;
+			}
+		}
+        else
+        {
+			//BasicVariable bv = currentAction.GetComponent<BasicVariable>();
+			// process action depending on action type
+			/*
+			switch (currentAction.GetComponent<BasicVariable>().variableType)
+			{
+				case BasicVariable.VariableType.Int:
+					//Add int variable processsing
+					if (ca.agent.GetComponent<robotMemory>()) 
+					{
+                        if (!ca.agent.GetComponent<robotMemory>().memory.ContainsKey(BasicVariable.VariableType.Int))
+                        {
+							string s = bv.value;
+							if (s == null)
+                            {
+								s = int.MaxValue.ToString();
+                            }
+							List<string> ls = new List<string>();
+							ls.Add(s);
+							Debug.Log("Added variable int of value " +s);
+							ca.agent.GetComponent<robotMemory>().memory.Add(BasicVariable.VariableType.Int, ls);
+                        }
+                        else
+                        {
+							List<string> ls = ca.GetComponent<robotMemory>().memory[BasicVariable.VariableType.Int];
+							ls.Add(bv.value);
+							ca.agent.GetComponent<robotMemory>().memory.Add(BasicVariable.VariableType.Int, ls);
+						}
+					}
+					break;
+			}*/
 		}
 		ca.StopAllCoroutines();
 		if (ca.gameObject.activeInHierarchy)

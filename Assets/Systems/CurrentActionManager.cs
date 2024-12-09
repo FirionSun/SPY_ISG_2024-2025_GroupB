@@ -119,7 +119,7 @@ public class CurrentActionManager : FSystem
 		if (action == null || infiniteLoopDetected)
 			return null;
 		exploredScripItem.Add(action.GetInstanceID());
-		if (action.GetComponent<BasicAction>())
+		if ((action.GetComponent<BasicAction>())||(action.GetComponent<BasicVariable>()))
 			return action;
 		else
 		{
@@ -167,7 +167,7 @@ public class CurrentActionManager : FSystem
 				{
 					// this for doesn't contain action or nb iteration == 0 or end loop reached => get first action of next action (could be if, for...)
 					if (forCont.currentFor >= forCont.nbFor)
-                    {
+					{
 						// reset nb iteration to 0
 						forCont.currentFor = 0;
 						forCont.transform.GetChild(1).GetChild(1).GetComponent<TMP_InputField>().text = (forCont.currentFor).ToString() + " / " + forCont.nbFor.ToString();
@@ -369,10 +369,25 @@ public class CurrentActionManager : FSystem
 		if (current_ba != null)
 		{
 			// if next is not defined or is a BasicAction we return it
-			if(current_ba.next == null || current_ba.next.GetComponent<BasicAction>())
+			if(current_ba.next == null || current_ba.next.GetComponent<BasicAction>() || current_ba.next.GetComponent<BasicVariable>())
 				return current_ba.next;
 			else
 				return getFirstActionOf(current_ba.next, agent);
+		}
+		
+		
+		//Check if currentAction is a variable
+		else if (currentAction.GetComponent<BasicVariable>())
+        {
+			BasicVariable current_bv = currentAction.GetComponent<BasicVariable>();
+			//
+			if (current_bv.next == null || current_bv.next.GetComponent<BasicAction>() || current_bv.next.GetComponent<BasicVariable>())
+			{
+				Debug.Log("Passe ici");
+				return current_ba.next;
+			}
+			else
+				return getFirstActionOf(current_bv.next, agent);
 		}
 		else if (currentAction.GetComponent<WhileControl>())
         {
