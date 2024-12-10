@@ -105,7 +105,7 @@ public class CurrentActionExecutor : FSystem {
 					break;
 				case BasicAction.ActionType.Wait:
 					break;
-				case BasicAction.ActionType.varInt:
+				case BasicAction.ActionType.VarInt:
 					//Add int variable processsing
 					if (ca.agent.GetComponent<robotMemory>())
 					{
