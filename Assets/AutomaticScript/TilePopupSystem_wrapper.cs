@@ -59,6 +59,16 @@ public class TilePopupSystem_wrapper : BaseWrapper
 		MainLoop.callAppropriateSystemMethod (system, "popupConsoleToggle", newData);
 	}
 
+	public void popupConsoleDropDown(System.Int32 newData)
+	{
+		MainLoop.callAppropriateSystemMethod (system, "popupConsoleDropDown", newData);
+	}
+
+	public void popupConsoleValue(System.String newData)
+	{
+		MainLoop.callAppropriateSystemMethod (system, "popupConsoleValue", newData);
+	}
+
 	public void popupDoorSlot(System.String newData)
 	{
 		MainLoop.callAppropriateSystemMethod (system, "popupDoorSlot", newData);
