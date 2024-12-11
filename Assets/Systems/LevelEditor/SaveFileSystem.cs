@@ -64,6 +64,12 @@ public class SaveFileSystem : FSystem
 		Utility.removeComments(doc);
 		gameData.levels[Utility.testFromLevelEditor] = doc.GetElementsByTagName("level")[0];
 		gameData.selectedScenario = Utility.testFromLevelEditor;
+
+		string savePath = Path.Combine(Directory.GetCurrentDirectory(), "TestLevel.xml");
+		File.WriteAllText(savePath, exportXML);
+		Debug.Log("Test level saved to: " + savePath);
+
+
 		WebGlScenario test = new WebGlScenario();
 		test.levels = new List<DataLevel>();
 		DataLevel dl = new DataLevel();
@@ -236,8 +242,12 @@ public class SaveFileSystem : FSystem
 			switch (fo)
 			{
 				case Console c:
-					levelExport += "\t<console state=\""+ (c.state ? "1" : "0") + "\" posX=\"" + (c.col+1 - minCol) + "\" posY=\""+ (c.line+1 - minLine) + "\" direction=\""+ (int)c.orientation + "\">\n";
-					// add each slot
+					levelExport += "\t<console state=\"" + (c.state ? "1" : "0") + 
+                           "\" posX=\"" + (c.col + 1 - minCol) + 
+                           "\" posY=\"" + (c.line + 1 - minLine) + 
+                           "\" direction=\"" + (int)c.orientation + 
+                           "\" type=\"" + c.type + 
+                           "\" value=\"" + c.value + "\">\n";					// add each slot
 					foreach (string slot in c.slots)
 						levelExport += "\t\t<slot slotId=\""+ slot + "\" />\n";
 					levelExport += "\t</console>\n\n";

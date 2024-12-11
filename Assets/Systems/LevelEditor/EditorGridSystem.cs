@@ -187,10 +187,19 @@ public class EditorGridSystem : FSystem
 						{
 							slotsID.Add(slot.Attributes.GetNamedItem("slotId").Value);
 						}
-						((Console)paintableGrid.floorObjects[position]).slots = slotsID.ToArray();
+						Console console = (Console)paintableGrid.floorObjects[position];
+						console.slots = slotsID.ToArray();
 
 						int state = int.Parse(child.Attributes.GetNamedItem("state").Value);
-						((Console)paintableGrid.floorObjects[position]).state = state == 1;
+						console.state = state == 1;
+
+						int type = int.Parse(child.Attributes.GetNamedItem("type").Value);
+						console.type = type;
+
+						string value = child.Attributes.GetNamedItem("value").Value;
+						console.value = value;
+						Debug.Log("[loadLevel] console.slots: " + string.Join(", ", console.slots));
+						Debug.Log("[loadLevel] console.value: " + console.value);
 					}
 					catch
 					{
@@ -424,10 +433,15 @@ public class Console : FloorObject
 	public string[] slots;
 	public bool state;
 
+	public int type;
+	public string value;
+
 	public Console(Direction.Dir orientation, int line, int col) : base(Cell.Console, orientation, line, col)
 	{
 		this.slots = new string[0];
 		this.state = true;
+		this.type = -1;
+		this.value = "";
 	}
 }
 
