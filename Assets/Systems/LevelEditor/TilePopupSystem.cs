@@ -101,8 +101,15 @@ public class TilePopupSystem : FSystem
 					GameObjectManager.setGameObjectState(orientationPopup, true);
 					GameObjectManager.setGameObjectState(consoleSlotsPopup, true);
 					// load data
-					consoleSlotsPopup.GetComponentInChildren<TMP_InputField>().text = string.Join(", ", c.slots);
+					TMP_InputField[] inputs = consoleSlotsPopup.GetComponentsInChildren<TMP_InputField>();
+					inputs[0].text = string.Join(", ", c.slots);
+					inputs[1].text = c.value;
+					Debug.Log("[onProcess] c.slots: " + string.Join(", ", c.slots));
+					Debug.Log("[onProcess] c.value: " + c.value);
+					//TMP_InputField valueInputField = consoleSlotsPopup.transform.Find("ValueInputField").GetComponent<TMP_InputField>();
+					// valueInputField. = c.value;
 					consoleSlotsPopup.GetComponentInChildren<Toggle>().isOn = c.state;
+					consoleSlotsPopup.GetComponentInChildren<TMP_Dropdown>().value = c.type;
 					break;
 				case PlayerRobot pr:
 					// enable popups
@@ -215,6 +222,7 @@ public class TilePopupSystem : FSystem
 	// see consoleSlotsPopup GameObject childs
 	public void popupConsoleSlots(string newData)
 	{
+		Debug.Log("hi new data in popupConsoleSlots: " + newData);
 		if (selectedObject != null)
 		{
 			string trimmed = String.Concat(newData.Where(c => !Char.IsWhiteSpace(c)));
@@ -229,6 +237,20 @@ public class TilePopupSystem : FSystem
 		if (selectedObject != null)
 			((Console)selectedObject).state = newData;
 	}
+
+	public void popupConsoleDropDown(int newData)
+	{
+		if (selectedObject != null)
+			((Console)selectedObject).type = newData;
+	}
+
+	public void popupConsoleValue(string newData)
+	{	
+		Debug.Log("hi new data in popupConsoleValue: " + newData);
+		if (selectedObject != null)
+			((Console)selectedObject).value = newData;
+	}
+
 
 	// see doorSlotPopup GameObject childs
 	public void popupDoorSlot(string newData)
