@@ -119,7 +119,7 @@ public class CurrentActionManager : FSystem
 		if (action == null || infiniteLoopDetected)
 			return null;
 		exploredScripItem.Add(action.GetInstanceID());
-		if ((action.GetComponent<BasicAction>())||(action.GetComponent<BasicVariable>()))
+		if (action.GetComponent<BasicAction>())
 			return action;
 		else
 		{
@@ -369,25 +369,10 @@ public class CurrentActionManager : FSystem
 		if (current_ba != null)
 		{
 			// if next is not defined or is a BasicAction we return it
-			if(current_ba.next == null || current_ba.next.GetComponent<BasicAction>() || current_ba.next.GetComponent<BasicVariable>())
+			if(current_ba.next == null || current_ba.next.GetComponent<BasicAction>())
 				return current_ba.next;
 			else
 				return getFirstActionOf(current_ba.next, agent);
-		}
-		
-		
-		//Check if currentAction is a variable
-		else if (currentAction.GetComponent<BasicVariable>())
-        {
-			BasicVariable current_bv = currentAction.GetComponent<BasicVariable>();
-			//
-			if (current_bv.next == null || current_bv.next.GetComponent<BasicAction>() || current_bv.next.GetComponent<BasicVariable>())
-			{
-				Debug.Log("Passe ici");
-				return current_ba.next;
-			}
-			else
-				return getFirstActionOf(current_bv.next, agent);
 		}
 		else if (currentAction.GetComponent<WhileControl>())
         {
