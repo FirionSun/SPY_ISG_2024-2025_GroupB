@@ -512,11 +512,10 @@ GameObject:
   - component: {fileID: 2614168004253937629}
   - component: {fileID: 2819489182395505029}
   - component: {fileID: 250575515055583023}
-  - component: {fileID: 4961889021919731871}
   - component: {fileID: 8583694959616280013}
   - component: {fileID: 4757971572102665747}
   m_Layer: 5
-  m_Name: Int
+  m_Name: VarInt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,19 +607,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionPrefab: {fileID: 3821364993045877023, guid: acb75d429b219ff48990a3dedd69ef7b,
     type: 3}
---- !u!114 &4961889021919731871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5512310400737986560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a851999ad524fd640a3b2ec45d400d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 'Initialiser variable de type int '
 --- !u!114 &8583694959616280013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10258,7 +10244,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8507923394634422046}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.999997
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22540,7 +22526,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8507923396146766959}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.63646513
+  m_Size: 0.6399745
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

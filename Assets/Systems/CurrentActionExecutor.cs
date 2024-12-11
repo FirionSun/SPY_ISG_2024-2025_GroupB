@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using TMPro;
 using FYFY;
 
 /// <summary>
@@ -84,9 +86,8 @@ public class CurrentActionExecutor : FSystem {
 	private void onNewCurrentAction(GameObject currentAction) {
 		Pause = false; // activates onProcess to identify inactive robots
 		
-		CurrentAction ca = currentAction.GetComponent<CurrentAction>();	
-
-		// process action depending on action type
+		CurrentAction ca = currentAction.GetComponent<CurrentAction>();
+        // process action depending on action type
 		switch (currentAction.GetComponent<BasicAction>().actionType){
 			case BasicAction.ActionType.Forward:
 				ApplyForward(ca.agent);
@@ -102,12 +103,47 @@ public class CurrentActionExecutor : FSystem {
 				break;
 			case BasicAction.ActionType.Wait:
 				break;
+			case BasicAction.ActionType.VarInt:
+				//Add int variable processsing
+				if (ca.agent.GetComponent<robotMemory>())
+				{
+					// check si variable déifni
+					string s;
+					if (ca.GetComponentInChildren<TMP_InputField>().text == "")
+					{
+						s = int.MaxValue.ToString();
+						Debug.Log("Maxvalue because no init " + s);
+					}
+					else
+					{
+						s = ca.transform.GetComponentInChildren<TMP_InputField>().text;
+						Debug.Log("Value found : " + s);
+					}
+					// check si int existe déjà dans la mémoire
+					if (!ca.agent.GetComponent<robotMemory>().memory.ContainsKey("int"))
+					{
+						Debug.Log("Not found in memo");
+						List<string> ls = new List<string>();	
+						ls.Add(s);
+						Debug.Log("Added variable int of value " + s);
+						ca.agent.GetComponent<robotMemory>().memory.Add("int", ls);
+					}
+					else{
+						Debug.Log("Found in memo");
+						List<string> ls = ca.GetComponent<robotMemory>().memory["int"];
+						ls.Add(s);
+						Debug.Log("Added variable int of value " + s);
+						ca.agent.GetComponent<robotMemory>().memory.Add("int", ls);
+					
+					}
+				}
+				break;
 			case BasicAction.ActionType.Activate:
 				Position agentPos = ca.agent.GetComponent<Position>();
 				foreach ( GameObject actGo in f_activableConsole){
 					if(actGo.GetComponent<Position>().x == agentPos.x && actGo.GetComponent<Position>().y == agentPos.y){
 						actGo.GetComponent<AudioSource>().Play();
-						
+					
 						//Ajouter ici le check porte avec variable + vérif de la condition
 						// toggle activable GameObject
 						if (actGo.GetComponent<TurnedOn>())

@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 371}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -347,7 +347,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -322, y: -314}
+      snapOffset: {x: -322, y: -310.4}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: unity-scene-view-toolbar
@@ -581,7 +581,7 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -217.59998, y: -273.6}
+      snapOffset: {x: -217.59998, y: -173.6}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: AINavigationOverlay
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: fc84ffff
       m_LastClickedID: 0
       m_ExpandedIDs: 7ad0fdff4c50fefff469feff30befeff82c2feff86dcfeff3089ffff7a96ffff84afffff2cfbffff269100005e9400007a940000d0950000b09700000c980000202b01002c2b01004a2c0100042e0100ae2e0100ca2e01004c3001002c32010088320100e07301006a7701008677010002790100e27a0100dcc90100bccb010066cd010082cd0100fece0100ded00100
       m_RenameOverlay:
@@ -1209,8 +1209,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 64640000
+    m_LastClickedInstanceID: 25700
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000072ab000050b100003abc00001cb200006cac0000a4b2000012bc000040af000008bb000000000000d86b000080700000f06b0000ec670000d25a0000bc740000e86b0000908b0000d65a000060410000
     m_RenameOverlay:

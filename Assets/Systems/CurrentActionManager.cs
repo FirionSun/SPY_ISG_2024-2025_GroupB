@@ -167,7 +167,7 @@ public class CurrentActionManager : FSystem
 				{
 					// this for doesn't contain action or nb iteration == 0 or end loop reached => get first action of next action (could be if, for...)
 					if (forCont.currentFor >= forCont.nbFor)
-                    {
+					{
 						// reset nb iteration to 0
 						forCont.currentFor = 0;
 						forCont.transform.GetChild(1).GetChild(1).GetComponent<TMP_InputField>().text = (forCont.currentFor).ToString() + " / " + forCont.nbFor.ToString();
