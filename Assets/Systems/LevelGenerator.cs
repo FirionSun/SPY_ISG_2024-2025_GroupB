@@ -342,7 +342,11 @@ public class LevelGenerator : FSystem {
 		GameObjectManager.bind(decoration);
 	}
 
-	private void createConsole(int state, int gridX, int gridY, List<int> slotIDs, Direction.Dir orientation, int type = -1, string value = "")
+<<<<<<< Updated upstream
+	private void createConsole(int state, int gridX, int gridY, List<int> slotIDs, Direction.Dir orientation)
+=======
+	private void createConsole(int state, int gridX, int gridY, List<int> slotIDs, Direction.Dir orientation, int type = 0, string value = "")
+>>>>>>> Stashed changes
 	{
 		GameObject activable = GameObject.Instantiate<GameObject>(Resources.Load("Prefabs/ActivableConsole") as GameObject, LevelGO.transform.position + new Vector3(gridY * 3, 3, gridX * 3), Quaternion.Euler(0, 0, 0), LevelGO.transform);
 
@@ -352,9 +356,15 @@ public class LevelGenerator : FSystem {
 			path.slotId = slotIDs[0];
 		else
 			path.slotId = -1;
+		PanelMemory memory = activable.GetComponent<PanelMemory>();
+		Debug.Log("[LevelGeneretor][createConsole] type = "+type.ToString()+", value = "+value);
+		memory.type = type;
+		memory.value = value;
 		activable.GetComponent<Position>().x = gridX;
 		activable.GetComponent<Position>().y = gridY;
 		activable.GetComponent<Direction>().direction = orientation;
+<<<<<<< Updated upstream
+=======
 		GameObjectManager.bind(activable);
 		// Add TooltipContent text
 		TooltipContent tooltipContent = activable.GetComponentInChildren<TooltipContent>();
@@ -363,10 +373,11 @@ public class LevelGenerator : FSystem {
 			{ 0, "int" },
 			{ 1, "boolean" },
 		};
-		if (tooltipContent != null && type != -1 && value != "")
+		if (tooltipContent != null && type != 0 && value != "")
 		{
 			tooltipContent.text = $"active moi avec une action ! \ndonne moi une variable (type: {varTypeEnum[type]} valeur: {value})";
 		}
+>>>>>>> Stashed changes
 		if (state == 1)
 			activable.AddComponent<TurnedOn>();
 	}
