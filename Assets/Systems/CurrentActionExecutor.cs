@@ -107,11 +107,44 @@ public class CurrentActionExecutor : FSystem {
 				foreach ( GameObject actGo in f_activableConsole){
 					if(actGo.GetComponent<Position>().x == agentPos.x && actGo.GetComponent<Position>().y == agentPos.y){
 						actGo.GetComponent<AudioSource>().Play();
+<<<<<<< Updated upstream
+=======
+						//Ajouter ici le check porte avec variable + vérif de la condition
+>>>>>>> Stashed changes
 						// toggle activable GameObject
-						if (actGo.GetComponent<TurnedOn>())
-							GameObjectManager.removeComponent<TurnedOn>(actGo);
-						else
-							GameObjectManager.addComponent<TurnedOn>(actGo);
+						PanelMemory panelMemory = actGo.GetComponent<PanelMemory>();
+						if (panelMemory.value == ""){
+							if (actGo.GetComponent<TurnedOn>())
+								GameObjectManager.removeComponent<TurnedOn>(actGo);
+							else
+								GameObjectManager.addComponent<TurnedOn>(actGo);
+						}
+						else{
+							Dictionary<int, string> varTypeEnum = new Dictionary<int, string>()
+							{
+								{ 0, "int" },
+								{ 1, "boolean" },
+							};
+
+							List<string> robotMemory = ca.agent.GetComponent<robotMemory>().memory[varTypeEnum[panelMemory.type]];
+							bool flag = false;
+							
+							foreach (string value in robotMemory)
+							{
+								if (value == panelMemory.value)
+									flag = true;
+									break;
+							}
+
+							if (flag){
+								if (actGo.GetComponent<TurnedOn>())
+									GameObjectManager.removeComponent<TurnedOn>(actGo);
+								else
+									GameObjectManager.addComponent<TurnedOn>(actGo);
+							}
+						}
+						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : type = "+actGo.GetComponent<PanelMemory>().type.ToString());
+						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : value = "+actGo.GetComponent<PanelMemory>().value);
 					}
 				}
 				ca.agent.GetComponent<Animator>().SetTrigger("Action");
