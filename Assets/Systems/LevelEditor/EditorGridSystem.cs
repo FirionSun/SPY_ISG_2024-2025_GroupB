@@ -191,9 +191,6 @@ public class EditorGridSystem : FSystem
 						console.slots = slotsID.ToArray();
 
 						int state = int.Parse(child.Attributes.GetNamedItem("state").Value);
-<<<<<<< Updated upstream
-						((Console)paintableGrid.floorObjects[position]).state = state == 1;
-=======
 						console.state = state == 1;
 
 						int type = int.Parse(child.Attributes.GetNamedItem("type").Value);
@@ -203,7 +200,6 @@ public class EditorGridSystem : FSystem
 						console.value = value;
 						Debug.Log("[EditorGridSystem][loadLevel] console.slots: " + string.Join(", ", console.slots));
 						Debug.Log("[EditorGridSystem][loadLevel] console.value: " + console.value);
->>>>>>> Stashed changes
 					}
 					catch
 					{

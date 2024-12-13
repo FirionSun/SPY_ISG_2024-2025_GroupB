@@ -39,7 +39,7 @@
 
 	<player inputLine="Bob" posX="1" posY="1" direction="2" />
 
-	<console state="1" posX="2" posY="1" direction="0" type="0" value="">
+	<console state="1" posX="2" posY="1" direction="0" type="0" value="3">
 		<slot slotId="0" />
 	</console>
 
