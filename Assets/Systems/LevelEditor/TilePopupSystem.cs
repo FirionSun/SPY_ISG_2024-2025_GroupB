@@ -240,6 +240,7 @@ public class TilePopupSystem : FSystem
 
 	public void popupConsoleDropDown(int newData)
 	{
+		Debug.Log("[TilePopupSystem][popUpConsoleDropDown] newData : "+newData.ToString());
 		if (selectedObject != null)
 			((Console)selectedObject).type = newData;
 	}
