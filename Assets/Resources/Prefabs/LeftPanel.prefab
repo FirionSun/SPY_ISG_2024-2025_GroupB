@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 8687624149092982612}
   - component: {fileID: 4294278129942963528}
   - component: {fileID: 8698316072453206108}
+  - component: {fileID: 3879537838844286986}
   - component: {fileID: 2556977799864517632}
   - component: {fileID: 4504733937953613370}
   m_Layer: 5
@@ -318,6 +319,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionPrefab: {fileID: 3821364993045877023, guid: 30c467c588e19ef42b83f7df305a238e,
     type: 3}
+--- !u!114 &3879537838844286986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195953902139423655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a851999ad524fd640a3b2ec45d400d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Initialiser variable type boolean
 --- !u!114 &2556977799864517632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +351,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: DragDropSystem_wrapper, Assembly-CSharp
-          m_MethodName: beginDragElementFromLibrary
+          m_MethodName: 
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -353,7 +367,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: DragDropSystem_wrapper, Assembly-CSharp
-          m_MethodName: dragElement
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -369,7 +383,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: DragDropSystem_wrapper, Assembly-CSharp
-          m_MethodName: endDragElement
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -385,7 +399,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: DragDropSystem_wrapper, Assembly-CSharp
-          m_MethodName: checkDoubleClick
+          m_MethodName: 
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -872,6 +886,7 @@ GameObject:
   - component: {fileID: 2614168004253937629}
   - component: {fileID: 2819489182395505029}
   - component: {fileID: 250575515055583023}
+  - component: {fileID: 8630208320987260525}
   - component: {fileID: 8583694959616280013}
   - component: {fileID: 4757971572102665747}
   m_Layer: 5
@@ -967,6 +982,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionPrefab: {fileID: 3821364993045877023, guid: acb75d429b219ff48990a3dedd69ef7b,
     type: 3}
+--- !u!114 &8630208320987260525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512310400737986560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a851999ad524fd640a3b2ec45d400d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Initialiser variable type int
 --- !u!114 &8583694959616280013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10680,7 +10708,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8507923394634422046}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9862932
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19842,7 +19870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000003639776}
+  m_AnchoredPosition: {x: 0, y: 1.8598424}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8507923395785239315
@@ -22962,7 +22990,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8507923396146766959}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6170043
+  m_Size: 0.49290156
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

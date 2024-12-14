@@ -195,22 +195,25 @@ public class CurrentActionExecutor : FSystem {
 								{ 1, "boolean" },
 							};
 
-							List<string> robotMemory = ca.agent.GetComponent<robotMemory>().memory[varTypeEnum[panelMemory.type]];
-							bool flag = false;
-							
-							foreach (string value in robotMemory)
-							{
-								if (value == panelMemory.value)
-									flag = true;
-									break;
-							}
+							Dictionary<string, List<string>> robotMemory = ca.agent.GetComponent<robotMemory>().memory;
+							if (robotMemory.ContainsKey(varTypeEnum[panelMemory.type])){
+								bool flag = false;
 
-							if (flag){
-								if (actGo.GetComponent<TurnedOn>())
-									GameObjectManager.removeComponent<TurnedOn>(actGo);
-								else
-									GameObjectManager.addComponent<TurnedOn>(actGo);
+								foreach (string value in robotMemory[varTypeEnum[panelMemory.type]])
+								{
+									if (value == panelMemory.value)
+										flag = true;
+										break;
+								}
+
+								if (flag){
+									if (actGo.GetComponent<TurnedOn>())
+										GameObjectManager.removeComponent<TurnedOn>(actGo);
+									else
+										GameObjectManager.addComponent<TurnedOn>(actGo);
+								}
 							}
+							
 						}
 						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : type = "+actGo.GetComponent<PanelMemory>().type.ToString());
 						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : value = "+actGo.GetComponent<PanelMemory>().value);
