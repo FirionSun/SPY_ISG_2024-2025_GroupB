@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 5527278765310417805}
   - component: {fileID: 7974989754513577806}
   m_Layer: 5
-  m_Name: VarInt
+  m_Name: varInt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
