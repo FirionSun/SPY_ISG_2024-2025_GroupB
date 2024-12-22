@@ -367,7 +367,7 @@ public class LevelGenerator : FSystem {
 			{ 0, "int" },
 			{ 1, "boolean" },
 		};
-		if (tooltipContent != null && type != 0 && value != "")
+		if (tooltipContent != null && type != -1 && value != "")
 		{
 			tooltipContent.text = $"active moi avec une action ! \ndonne moi une variable (type: {varTypeEnum[type]} valeur: {value})";
 		}
