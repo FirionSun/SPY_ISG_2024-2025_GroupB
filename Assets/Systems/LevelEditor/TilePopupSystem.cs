@@ -240,15 +240,61 @@ public class TilePopupSystem : FSystem
 
 	public void popupConsoleDropDown(int newData)
 	{
+		Debug.Log("hi new data in popupConsoleDropDown: " + newData);
 		if (selectedObject != null)
 			((Console)selectedObject).type = newData;
 	}
 
 	public void popupConsoleValue(string newData)
-	{	
+	{
 		Debug.Log("hi new data in popupConsoleValue: " + newData);
-		if (selectedObject != null)
-			((Console)selectedObject).value = newData;
+
+		// If selectedObject is null, skip further processing
+		if (selectedObject == null) return;
+
+		// Get the Console object
+		Console console = (Console)selectedObject;
+
+		// Check the value of console.type and process accordingly
+		switch (console.type)
+		{
+			case -1:
+				// If type is -1, skip processing
+				return;
+
+			case 0:
+				// If type is 0, check if newData is a number
+				if (!int.TryParse(newData, out _))
+				{
+					console.value = ""; // If not a number, clear the value
+				}
+				else
+				{
+					console.value = newData; // Otherwise, update the value
+				}
+				break;
+
+			case 1:
+				// If type is 1, check if newData is "true" or "false"
+				if (newData != "true" && newData != "false")
+				{
+					console.value = ""; // If not "true" or "false", clear the value
+				}
+				else
+				{
+					console.value = newData; // Otherwise, update the value
+				}
+				break;
+
+			case 2:
+				// If type is 2, accept any string value
+				console.value = newData;
+				break;
+
+			default:
+				// For unknown type values, skip processing
+				return;
+		}
 	}
 
 

@@ -366,13 +366,43 @@ public class LevelGenerator : FSystem {
 		{
 			{ 0, "int" },
 			{ 1, "boolean" },
+			{ 2, "string" },
 		};
 		if (tooltipContent != null && type != -1 && value != "")
 		{
-			tooltipContent.text = $"active moi avec une action ! \ndonne moi une variable (type: {varTypeEnum[type]} valeur: {value})";
+			if (ValidateValue(type, value))
+			{
+				tooltipContent.text = $"active moi avec une action ! \ndonne moi une variable (type: {varTypeEnum[type]} valeur: {value})";
+			}
+			else
+			{
+				tooltipContent.text = "active moi avec une action !";
+				Debug.LogWarning($"Invalid value '{value}' for type {type}");
+			}		
 		}
 		if (state == 1)
 			activable.AddComponent<TurnedOn>();
+	}
+
+	private bool ValidateValue(int type, string value)
+	{
+		switch (type)
+		{
+			case -1:
+				return false; // -1 is not a valid type
+
+			case 0:
+				return int.TryParse(value, out _); // Valid if the value is an integer
+
+			case 1:
+				return value == "true" || value == "false"; // Valid if the value is a boolean
+
+			case 2:
+				return true; // Any string is valid for type 2
+
+			default:
+				return false; // Unknown type
+		}
 	}
 
 	private void createSpawnExit(int gridX, int gridY, bool type, bool hideExit = false){

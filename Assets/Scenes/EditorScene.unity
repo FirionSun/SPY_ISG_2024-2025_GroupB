@@ -676,8 +676,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247112759}
   m_HandleRect: {fileID: 247112758}
   m_Direction: 2
-  m_Value: 0.9999995
-  m_Size: 0.75849056
+  m_Value: 0.9999996
+  m_Size: 0.73018867
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13701,8 +13701,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391362985}
   m_HandleRect: {fileID: 391362984}
   m_Direction: 2
-  m_Value: 0.9999966
-  m_Size: 0.95714283
+  m_Value: 0.99999815
+  m_Size: 0.92142856
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17847,11 +17847,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2049420947}
         m_TargetAssemblyTypeName: TilePopupSystem_wrapper, Assembly-CSharp
         m_MethodName: popupConsoleDropDown
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
