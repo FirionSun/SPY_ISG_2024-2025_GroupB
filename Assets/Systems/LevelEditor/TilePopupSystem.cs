@@ -237,12 +237,43 @@ public class TilePopupSystem : FSystem
 		if (selectedObject != null)
 			((Console)selectedObject).state = newData;
 	}
-
 	public void popupConsoleDropDown(int newData)
 	{
 		Debug.Log("hi new data in popupConsoleDropDown: " + newData);
 		if (selectedObject != null)
-			((Console)selectedObject).type = newData;
+		{
+			Console console = (Console)selectedObject;
+
+			// Update type
+			console.type = newData;
+
+			// Verify and update value based on the new type
+			if (!ValidateValue(console.type, console.value))
+			{
+				console.value = ""; // Clear value if it does not match the new type
+			}
+		}
+	}
+
+	private bool ValidateValue(int type, string value)
+	{
+		switch (type)
+		{
+			case -1:
+				return false; // -1 is not a valid type
+
+			case 0:
+				return int.TryParse(value, out _); // Valid if the value is an integer
+
+			case 1:
+				return value == "true" || value == "false"; // Valid if the value is a boolean
+
+			case 2:
+				return true; // Any string is valid for type 2
+
+			default:
+				return false; // Unknown type
+		}
 	}
 
 	public void popupConsoleValue(string newData)
