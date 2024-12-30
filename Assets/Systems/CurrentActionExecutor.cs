@@ -154,13 +154,13 @@ public class CurrentActionExecutor : FSystem {
 						s = ca.transform.GetComponentInChildren<TMP_InputField>().text;
 						Debug.Log("Value found : " + s);
 					}
-					// check si int existe déjà dans la mémoire
+					// check si type bool existe déjà dans la mémoire
 					if (!ca.agent.GetComponent<robotMemory>().memory.ContainsKey("boolean"))
 					{
 						Debug.Log("Not found in memo");
 						List<string> ls = new List<string>();	
 						ls.Add(s);
-						Debug.Log("Added variable string of value " + s);
+						Debug.Log("Added variable boolean of value " + s);
 						ca.agent.GetComponent<robotMemory>().memory.Add("boolean", ls);
 					}
 					else{
@@ -173,6 +173,41 @@ public class CurrentActionExecutor : FSystem {
 					}
 				}
 				break;
+			case BasicAction.ActionType.VarString:
+				//Add int variable processsing
+				if (ca.agent.GetComponent<robotMemory>())
+				{
+					// check si variable déifni
+					string s;
+					if (ca.GetComponentInChildren<TMP_InputField>().text == "")
+					{
+						s = "";
+						Debug.Log("string not init " + s);
+					}
+					else
+					{
+						s = ca.transform.GetComponentInChildren<TMP_InputField>().text;
+						Debug.Log("Value found : " + s);
+					}
+					// check si type string existe déjà dans la mémoire
+					if (!ca.agent.GetComponent<robotMemory>().memory.ContainsKey("string"))
+					{
+						Debug.Log("Type string not found in memo");
+						List<string> ls = new List<string>();	
+						ls.Add(s);
+						Debug.Log("Added variable string of value " + s);
+						ca.agent.GetComponent<robotMemory>().memory.Add("string", ls);
+					}
+					else{
+						Debug.Log("Type string found in memo");
+						List<string> ls = ca.GetComponent<robotMemory>().memory["string"];
+						ls.Add(s);
+						Debug.Log("Added variable string of value " + s);
+						ca.agent.GetComponent<robotMemory>().memory.Add("string", ls);
+					
+					}
+				}
+				break;	
 			
 			case BasicAction.ActionType.Activate:
 				Position agentPos = ca.agent.GetComponent<Position>();
@@ -182,7 +217,9 @@ public class CurrentActionExecutor : FSystem {
 						//Ajouter ici le check porte avec variable + vérif de la condition
 						// toggle activable GameObject
 						PanelMemory panelMemory = actGo.GetComponent<PanelMemory>();
+						Debug.Log("[onCurrentAction] panelMemory.value : "+panelMemory.value);
 						if (panelMemory.value == ""){
+							Debug.Log("[onCurrentAction] panelMemory.value null : "+panelMemory.value);
 							if (actGo.GetComponent<TurnedOn>())
 								GameObjectManager.removeComponent<TurnedOn>(actGo);
 							else
@@ -193,14 +230,18 @@ public class CurrentActionExecutor : FSystem {
 							{
 								{ 0, "int" },
 								{ 1, "boolean" },
+								{ 2, "string" },
 							};
-
+							Debug.Log("[onCurrentAction] panelMemory.type : "+panelMemory.type);
 							Dictionary<string, List<string>> robotMemory = ca.agent.GetComponent<robotMemory>().memory;
+							Debug.Log("[onCurrentAction] containsKeys : "+robotMemory.ContainsKey(varTypeEnum[panelMemory.type]));
 							if (robotMemory.ContainsKey(varTypeEnum[panelMemory.type])){
 								bool flag = false;
+								Debug.Log("[onCurrentAction] panelMemory.value not null : "+panelMemory.value);
 
 								foreach (string value in robotMemory[varTypeEnum[panelMemory.type]])
 								{
+									Debug.Log("[onCurrentAction] robotMemory.value : "+value);
 									if (value == panelMemory.value)
 										flag = true;
 										break;
@@ -213,7 +254,15 @@ public class CurrentActionExecutor : FSystem {
 										GameObjectManager.addComponent<TurnedOn>(actGo);
 								}
 							}
-							
+							else{
+								Debug.Log("[onCurrentAction] varType inconnu : "+panelMemory.type+" -> "+varTypeEnum[panelMemory.type]);
+								string keys = "";
+								foreach (var key in robotMemory.Keys)
+								{
+									keys = keys + key + " ";
+								}
+								Debug.Log("[onCurrentAction] robotMemory Keys : "+keys);
+							}
 						}
 						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : type = "+actGo.GetComponent<PanelMemory>().type.ToString());
 						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : value = "+actGo.GetComponent<PanelMemory>().value);
