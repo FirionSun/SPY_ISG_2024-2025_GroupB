@@ -35,11 +35,12 @@
 		<blockLimit blockType="Terminal" limit="0" />
 		<blockLimit blockType="Exit" limit="0" />
 		<blockLimit blockType="VarInt" limit="1" />
+		<blockLimit blockType="VarBool" limit="1" />
 	</blockLimits>
 
 	<player inputLine="Bob" posX="1" posY="1" direction="2" />
 
-	<console state="1" posX="2" posY="1" direction="0" type="0" value="3">
+	<console state="1" posX="2" posY="1" direction="0" type="1" value="1">
 		<slot slotId="0" />
 	</console>
 

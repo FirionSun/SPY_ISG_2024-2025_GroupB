@@ -138,6 +138,42 @@ public class CurrentActionExecutor : FSystem {
 					}
 				}
 				break;
+			case BasicAction.ActionType.VarBool:
+				//Add int variable processsing
+				if (ca.agent.GetComponent<robotMemory>())
+				{
+					// check si variable déifni
+					string s;
+					if (ca.GetComponentInChildren<TMP_InputField>().text == "")
+					{
+						s = "";
+						Debug.Log("string not init " + s);
+					}
+					else
+					{
+						s = ca.transform.GetComponentInChildren<TMP_InputField>().text;
+						Debug.Log("Value found : " + s);
+					}
+					// check si int existe déjà dans la mémoire
+					if (!ca.agent.GetComponent<robotMemory>().memory.ContainsKey("boolean"))
+					{
+						Debug.Log("Not found in memo");
+						List<string> ls = new List<string>();	
+						ls.Add(s);
+						Debug.Log("Added variable string of value " + s);
+						ca.agent.GetComponent<robotMemory>().memory.Add("boolean", ls);
+					}
+					else{
+						Debug.Log("Found in memo");
+						List<string> ls = ca.GetComponent<robotMemory>().memory["boolean"];
+						ls.Add(s);
+						Debug.Log("Added variable string of value " + s);
+						ca.agent.GetComponent<robotMemory>().memory.Add("boolean", ls);
+					
+					}
+				}
+				break;
+			
 			case BasicAction.ActionType.Activate:
 				Position agentPos = ca.agent.GetComponent<Position>();
 				foreach ( GameObject actGo in f_activableConsole){
@@ -159,22 +195,25 @@ public class CurrentActionExecutor : FSystem {
 								{ 1, "boolean" },
 							};
 
-							List<string> robotMemory = ca.agent.GetComponent<robotMemory>().memory[varTypeEnum[panelMemory.type]];
-							bool flag = false;
-							
-							foreach (string value in robotMemory)
-							{
-								if (value == panelMemory.value)
-									flag = true;
-									break;
-							}
+							Dictionary<string, List<string>> robotMemory = ca.agent.GetComponent<robotMemory>().memory;
+							if (robotMemory.ContainsKey(varTypeEnum[panelMemory.type])){
+								bool flag = false;
 
-							if (flag){
-								if (actGo.GetComponent<TurnedOn>())
-									GameObjectManager.removeComponent<TurnedOn>(actGo);
-								else
-									GameObjectManager.addComponent<TurnedOn>(actGo);
+								foreach (string value in robotMemory[varTypeEnum[panelMemory.type]])
+								{
+									if (value == panelMemory.value)
+										flag = true;
+										break;
+								}
+
+								if (flag){
+									if (actGo.GetComponent<TurnedOn>())
+										GameObjectManager.removeComponent<TurnedOn>(actGo);
+									else
+										GameObjectManager.addComponent<TurnedOn>(actGo);
+								}
 							}
+							
 						}
 						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : type = "+actGo.GetComponent<PanelMemory>().type.ToString());
 						// Debug.Log("[CurrentActionExecutor][onNewCurrentAction] panel memory : value = "+actGo.GetComponent<PanelMemory>().value);
