@@ -739,6 +739,40 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 570210727992613973, guid: bbdf9c9ea1f0cd64c9de2123ed0edf28,
+            type: 3}
+          m_TargetAssemblyTypeName: CameraSystemBridge, Assembly-CSharp
+          m_MethodName: PauseCameraSystem
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 570210727992613973, guid: bbdf9c9ea1f0cd64c9de2123ed0edf28,
+            type: 3}
+          m_TargetAssemblyTypeName: CameraSystemBridge, Assembly-CSharp
+          m_MethodName: PauseCameraSystem
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1721759257969761979
 MonoBehaviour:
   m_ObjectHideFlags: 0

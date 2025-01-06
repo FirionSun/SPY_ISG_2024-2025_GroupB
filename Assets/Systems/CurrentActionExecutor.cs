@@ -130,10 +130,10 @@ public class CurrentActionExecutor : FSystem {
 					}
 					else{
 						Debug.Log("Found in memo");
-						List<string> ls = ca.GetComponent<robotMemory>().memory["int"];
-						ls.Add(s);
+						// List<string> ls = ca.agent.GetComponent<robotMemory>().memory["int"];
+						// ls.Add(s);
+						ca.agent.GetComponent<robotMemory>().memory["int"].Add(s);
 						Debug.Log("Added variable int of value " + s);
-						ca.agent.GetComponent<robotMemory>().memory.Add("int", ls);
 					
 					}
 				}
@@ -165,10 +165,10 @@ public class CurrentActionExecutor : FSystem {
 					}
 					else{
 						Debug.Log("Found in memo");
-						List<string> ls = ca.GetComponent<robotMemory>().memory["boolean"];
-						ls.Add(s);
+						// List<string> ls = ca.agent.GetComponent<robotMemory>().memory["boolean"];
+						// ls.Add(s);
+						ca.agent.GetComponent<robotMemory>().memory["boolean"].Add(s);
 						Debug.Log("Added variable string of value " + s);
-						ca.agent.GetComponent<robotMemory>().memory.Add("boolean", ls);
 					
 					}
 				}
@@ -200,10 +200,10 @@ public class CurrentActionExecutor : FSystem {
 					}
 					else{
 						Debug.Log("Type string found in memo");
-						List<string> ls = ca.GetComponent<robotMemory>().memory["string"];
-						ls.Add(s);
+						// List<string> ls = ca.agent.GetComponent<robotMemory>().memory["string"];
+						// ls.Add(s);
+						ca.agent.GetComponent<robotMemory>().memory["string"].Add(s);
 						Debug.Log("Added variable string of value " + s);
-						ca.agent.GetComponent<robotMemory>().memory.Add("string", ls);
 					
 					}
 				}
@@ -237,14 +237,15 @@ public class CurrentActionExecutor : FSystem {
 							Debug.Log("[onCurrentAction] containsKeys : "+robotMemory.ContainsKey(varTypeEnum[panelMemory.type]));
 							if (robotMemory.ContainsKey(varTypeEnum[panelMemory.type])){
 								bool flag = false;
-								Debug.Log("[onCurrentAction] panelMemory.value not null : "+panelMemory.value);
-
+								Debug.Log("[OnCurrentAction] robotMemory has "+robotMemory[varTypeEnum[panelMemory.type]].Count+" elements");
 								foreach (string value in robotMemory[varTypeEnum[panelMemory.type]])
 								{
 									Debug.Log("[onCurrentAction] robotMemory.value : "+value);
-									if (value == panelMemory.value)
+									if (string.Compare(value, panelMemory.value) == 0){
+										Debug.Log("[OnCurrentAction] value = "+value+", panelMemory.value = "+panelMemory.value);
 										flag = true;
 										break;
+									}
 								}
 
 								if (flag){
