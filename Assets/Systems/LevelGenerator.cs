@@ -488,7 +488,12 @@ public class LevelGenerator : FSystem {
 			slotsID.Add(int.Parse(child.Attributes.GetNamedItem("slotId").Value));
 		}
 
-		createConsole(int.Parse(activableNode.Attributes.GetNamedItem("state").Value), int.Parse(activableNode.Attributes.GetNamedItem("posX").Value), int.Parse(activableNode.Attributes.GetNamedItem("posY").Value),
-		 slotsID, (Direction.Dir)int.Parse(activableNode.Attributes.GetNamedItem("direction").Value), int.Parse(activableNode.Attributes.GetNamedItem("type").Value), activableNode.Attributes.GetNamedItem("value").Value);
+		try {
+			createConsole(int.Parse(activableNode.Attributes.GetNamedItem("state").Value), int.Parse(activableNode.Attributes.GetNamedItem("posX").Value), int.Parse(activableNode.Attributes.GetNamedItem("posY").Value), slotsID, (Direction.Dir)int.Parse(activableNode.Attributes.GetNamedItem("direction").Value), int.Parse(activableNode.Attributes.GetNamedItem("type").Value), activableNode.Attributes.GetNamedItem("value").Value);
+		} 
+		catch (NullReferenceException){
+			createConsole(int.Parse(activableNode.Attributes.GetNamedItem("state").Value), int.Parse(activableNode.Attributes.GetNamedItem("posX").Value), int.Parse(activableNode.Attributes.GetNamedItem("posY").Value), slotsID, (Direction.Dir)int.Parse(activableNode.Attributes.GetNamedItem("direction").Value));
+		}
+		
 	}
 }

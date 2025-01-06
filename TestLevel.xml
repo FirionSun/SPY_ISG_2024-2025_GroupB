@@ -34,14 +34,14 @@
 		<blockLimit blockType="FieldGate" limit="0" />
 		<blockLimit blockType="Terminal" limit="0" />
 		<blockLimit blockType="Exit" limit="0" />
-		<blockLimit blockType="VarInt" limit="-1" />
-		<blockLimit blockType="VarBool" limit="-1" />
-		<blockLimit blockType="VarString" limit="-1" />
+		<blockLimit blockType="VarInt" limit="1" />
+		<blockLimit blockType="VarBool" limit="1" />
+		<blockLimit blockType="VarString" limit="1" />
 	</blockLimits>
 
 	<player inputLine="Bob" posX="1" posY="1" direction="2" />
 
-	<console state="1" posX="2" posY="1" direction="0" type="2" value="Apple">
+	<console state="1" posX="2" posY="1" direction="0" type="1" value="">
 		<slot slotId="0" />
 	</console>
 
@@ -52,5 +52,18 @@
 	</console>
 
 	<door posX="5" posY="1" slotId="1" direction="3" />
+
+	<script outputLine="Bob" editMode="2" type="3">
+		<for nbFor="3">
+		</for>
+		<action type="VarString" val=""/>
+		<action type="Forward"/>
+		<action type="Activate"/>
+	</script>
+
+	<script outputLine="Script2" editMode="2" type="3">
+		<action type="VarBool" val=""/>
+		<action type="VarInt" val=""/>
+	</script>
 
 </level>
