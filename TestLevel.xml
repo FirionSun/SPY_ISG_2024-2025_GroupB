@@ -34,9 +34,9 @@
 		<blockLimit blockType="FieldGate" limit="0" />
 		<blockLimit blockType="Terminal" limit="0" />
 		<blockLimit blockType="Exit" limit="0" />
-		<blockLimit blockType="VarInt" limit="1" />
-		<blockLimit blockType="VarBool" limit="1" />
-		<blockLimit blockType="VarString" limit="1" />
+		<blockLimit blockType="VarInt" limit="-1" />
+		<blockLimit blockType="VarBool" limit="-1" />
+		<blockLimit blockType="VarString" limit="-1" />
 	</blockLimits>
 
 	<player inputLine="Bob" posX="1" posY="1" direction="2" />

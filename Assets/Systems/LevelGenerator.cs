@@ -372,7 +372,7 @@ public class LevelGenerator : FSystem {
 		{
 			if (ValidateValue(type, value))
 			{
-				tooltipContent.text = $"active moi avec une action ! \ndonne moi une variable (type: {varTypeEnum[type]} valeur: {value})";
+				tooltipContent.text = $"active moi avec une action ! \ndonne moi une variable (type: {varTypeEnum[type]}, valeur: {value})";
 			}
 			else
 			{
