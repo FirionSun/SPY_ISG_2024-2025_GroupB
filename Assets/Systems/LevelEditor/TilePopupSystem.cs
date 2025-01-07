@@ -266,7 +266,7 @@ public class TilePopupSystem : FSystem
 				return int.TryParse(value, out _); // Valid if the value is an integer
 
 			case 1:
-				return value == "True" || value == "False"; // Valid if the value is a boolean
+				return value.Equals("True") || value.Equals("False"); // Valid if the value is a boolean
 
 			case 2:
 				return true; // Any string is valid for type 2
@@ -307,13 +307,13 @@ public class TilePopupSystem : FSystem
 
 			case 1:
 				// If type is 1, check if newData is "true" or "false"
-				if (newData != "true" && newData != "false")
+				if (newData.Equals("True") || newData.Equals("False"))
 				{
-					console.value = ""; // If not "true" or "false", clear the value
+					console.value = newData; // If not "true" or "false", clear the value
 				}
 				else
 				{
-					console.value = newData; // Otherwise, update the value
+					console.value = ""; // Otherwise, update the value
 				}
 				break;
 

@@ -395,7 +395,7 @@ public class LevelGenerator : FSystem {
 				return int.TryParse(value, out _); // Valid if the value is an integer
 
 			case 1:
-				return value == "True" || value == "False"; // Valid if the value is a boolean
+				return value.Equals("True") || value.Equals("False"); // Valid if the value is a boolean
 
 			case 2:
 				return true; // Any string is valid for type 2
