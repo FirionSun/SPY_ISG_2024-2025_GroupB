@@ -646,7 +646,7 @@ MonoBehaviour:
   highlightedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   next: {fileID: 0}
   actionType: 6
-  value: 
+  value: 0
 --- !u!114 &7281793342713614650
 MonoBehaviour:
   m_ObjectHideFlags: 0

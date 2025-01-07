@@ -780,6 +780,7 @@ public class DragDropSystem : FSystem
 		string oldValue = varIntBlock.GetComponent<BasicAction>().value;
 		int res;
 		bool success = Int32.TryParse(newValue, out res);
+		Debug.Log("[DragDropSystem] succes = "+success+", res = "+res);
 		if (!success)
 		{
 			varIntBlock.GetComponentInChildren<TMP_InputField>().text = "0";
@@ -812,8 +813,8 @@ public class DragDropSystem : FSystem
 		bool success = newValue.Equals("True") || newValue.Equals("False");
 		if (!success)
 		{
-			varBoolBlock.GetComponentInChildren<TMP_InputField>().text = "";
-			res = "";
+			varBoolBlock.GetComponentInChildren<TMP_InputField>().text = "True";
+			res = "True";
 		}
 		else{
 			res = newValue;

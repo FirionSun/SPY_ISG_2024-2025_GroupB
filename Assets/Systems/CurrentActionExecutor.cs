@@ -111,8 +111,8 @@ public class CurrentActionExecutor : FSystem {
 					string s;
 					if (ca.GetComponentInChildren<TMP_InputField>().text == "")
 					{
-						s = int.MaxValue.ToString();
-						Debug.Log("Maxvalue because no init " + s);
+						s = "0";
+						Debug.Log("int no init " + s);
 					}
 					else
 					{
@@ -177,7 +177,7 @@ public class CurrentActionExecutor : FSystem {
 					string s;
 					if (ca.GetComponentInChildren<TMP_InputField>().text == "")
 					{
-						s = "";
+						s = "True";
 						Debug.Log("string not init " + s);
 					}
 					else
