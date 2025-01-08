@@ -136,29 +136,36 @@ public class CurrentActionExecutor : FSystem {
 						Debug.Log("Added variable int of value " + s);
 					
 					}
+
+					// tooltip
 					TooltipContent tooltipContent = ca.agent.GetComponentInChildren<TooltipContent>();
 					robotMemory robotMem = ca.agent.GetComponent<robotMemory>();
 					
 					string valueInt = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("int")){
+						valueInt = valueInt + "int : ";
 						for (int i = 0; i < robotMem.memory["int"].Count; i++){
 							valueInt = valueInt + robotMem.memory["int"][i];
 							if (i < robotMem.memory["int"].Count - 1)
 								valueInt = valueInt + ", ";
 						}
+						valueInt = valueInt + "\n";
 					}
 
 					string valueBool = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("boolean")){
+						valueBool = valueBool + "boolean : ";
 						for (int i = 0; i < robotMem.memory["boolean"].Count; i++){
 							valueBool = valueBool + robotMem.memory["boolean"][i];
 							if (i < robotMem.memory["boolean"].Count - 1)
 								valueBool = valueBool + ", ";
 						}
+						valueBool = valueBool + "\n";
 					}
 
 					string valueString = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("string")){
+						valueString = valueString + "string : ";
 						for (int i = 0; i < robotMem.memory["string"].Count; i++){
 							valueString = valueString + robotMem.memory["string"][i];
 							if (i < robotMem.memory["string"].Count - 1)
@@ -166,7 +173,7 @@ public class CurrentActionExecutor : FSystem {
 						}
 					}
 					
-					tooltipContent.text = $"#agentName<br>clique pour voir mon<br>comportement !\n\nMémoire :\nint : {valueInt}\nboolean : {valueBool}\nstring : {valueString}";
+					tooltipContent.text = $"#agentName<br>clique pour voir mon<br>comportement !\n\nMémoire :\n{valueInt}{valueBool}{valueString}";
 				}
 				break;
 			case BasicAction.ActionType.VarBool:
@@ -196,35 +203,41 @@ public class CurrentActionExecutor : FSystem {
 					}
 					else{
 						Debug.Log("Found in memo");
-						// List<string> ls = ca.agent.GetComponent<robotMemory>().memory["boolean"];
-						// ls.Add(s);
-						ca.agent.GetComponent<robotMemory>().memory["boolean"].Add(s);
+						List<string> ls = new List<string>();
+						ls.Add(s);
+						ca.agent.GetComponent<robotMemory>().memory["boolean"] = ls;
 						Debug.Log("Added variable string of value " + s);
-					
 					}
+					
+					// tooltip
 					TooltipContent tooltipContent = ca.agent.GetComponentInChildren<TooltipContent>();
 					robotMemory robotMem = ca.agent.GetComponent<robotMemory>();
 					
 					string valueInt = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("int")){
+						valueInt = valueInt + "int : ";
 						for (int i = 0; i < robotMem.memory["int"].Count; i++){
 							valueInt = valueInt + robotMem.memory["int"][i];
 							if (i < robotMem.memory["int"].Count - 1)
 								valueInt = valueInt + ", ";
 						}
+						valueInt = valueInt + "\n";
 					}
 
 					string valueBool = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("boolean")){
+						valueBool = valueBool + "boolean : ";
 						for (int i = 0; i < robotMem.memory["boolean"].Count; i++){
 							valueBool = valueBool + robotMem.memory["boolean"][i];
 							if (i < robotMem.memory["boolean"].Count - 1)
 								valueBool = valueBool + ", ";
 						}
+						valueBool = valueBool + "\n";
 					}
 
 					string valueString = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("string")){
+						valueString = valueString + "string : ";
 						for (int i = 0; i < robotMem.memory["string"].Count; i++){
 							valueString = valueString + robotMem.memory["string"][i];
 							if (i < robotMem.memory["string"].Count - 1)
@@ -232,7 +245,7 @@ public class CurrentActionExecutor : FSystem {
 						}
 					}
 					
-					tooltipContent.text = $"#agentName<br>clique pour voir mon<br>comportement !\n\nMémoire :\nint : {valueInt}\nboolean : {valueBool}\nstring : {valueString}";
+					tooltipContent.text = $"#agentName<br>clique pour voir mon<br>comportement !\n\nMémoire :\n{valueInt}{valueBool}{valueString}";
 				}
 				break;
 			case BasicAction.ActionType.VarString:
@@ -268,30 +281,36 @@ public class CurrentActionExecutor : FSystem {
 						Debug.Log("Added variable string of value " + s);
 					
 					}
+
 					// tooltip
 					TooltipContent tooltipContent = ca.agent.GetComponentInChildren<TooltipContent>();
 					robotMemory robotMem = ca.agent.GetComponent<robotMemory>();
 					
 					string valueInt = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("int")){
+						valueInt = valueInt + "int : ";
 						for (int i = 0; i < robotMem.memory["int"].Count; i++){
 							valueInt = valueInt + robotMem.memory["int"][i];
 							if (i < robotMem.memory["int"].Count - 1)
 								valueInt = valueInt + ", ";
 						}
+						valueInt = valueInt + "\n";
 					}
 
 					string valueBool = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("boolean")){
+						valueBool = valueBool + "boolean : ";
 						for (int i = 0; i < robotMem.memory["boolean"].Count; i++){
 							valueBool = valueBool + robotMem.memory["boolean"][i];
 							if (i < robotMem.memory["boolean"].Count - 1)
 								valueBool = valueBool + ", ";
 						}
+						valueBool = valueBool + "\n";
 					}
 
 					string valueString = "";
 					if (ca.agent.GetComponent<robotMemory>().memory.ContainsKey("string")){
+						valueString = valueString + "string : ";
 						for (int i = 0; i < robotMem.memory["string"].Count; i++){
 							valueString = valueString + robotMem.memory["string"][i];
 							if (i < robotMem.memory["string"].Count - 1)
@@ -299,7 +318,7 @@ public class CurrentActionExecutor : FSystem {
 						}
 					}
 					
-					tooltipContent.text = $"#agentName<br>clique pour voir mon<br>comportement !\n\nMémoire :\nint : {valueInt}\nboolean : {valueBool}\nstring : {valueString}";
+					tooltipContent.text = $"#agentName<br>clique pour voir mon<br>comportement !\n\nMémoire :\n{valueInt}{valueBool}{valueString}";
 				}
 				break;	
 			
