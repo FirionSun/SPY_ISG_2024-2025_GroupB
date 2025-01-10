@@ -1,0 +1,1285 @@
+{
+    "3D37C851": {
+        "levels/infiltration/niveau01.xml": {
+            "completed": true,
+            "total_games": 8,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau02.xml": {
+            "completed": true,
+            "total_games": 6,
+            "total_games_completed": 6,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau03.xml": {
+            "completed": true,
+            "total_games": 8,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/tutoriel/nommerscript.xml": {
+            "completed": true,
+            "total_games": 10,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau04.xml": {
+            "completed": true,
+            "total_games": 13,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau05.xml": {
+            "completed": true,
+            "total_games": 10,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_CorrectBuggedScript",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau06.xml": {
+            "completed": true,
+            "total_games": 9,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau07.xml": {
+            "completed": true,
+            "total_games": 11,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/tutoriel/ouvrirporte.xml": {
+            "completed": true,
+            "total_games": 10,
+            "total_games_completed": 3,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate"
+            ]
+        },
+        "levels/infiltration/niveau09.xml": {
+            "completed": true,
+            "total_games": 15,
+            "total_games_completed": 6,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/infiltration/niveau10.xml": {
+            "completed": true,
+            "total_games": 9,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau11.xml": {
+            "completed": true,
+            "total_games": 10,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/infiltration/niveau12.xml": {
+            "completed": true,
+            "total_games": 19,
+            "total_games_completed": 9,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_ForLoop",
+                "SPY_Control_Forever"
+            ]
+        },
+        "levels/infiltration/niveau13.xml": {
+            "completed": true,
+            "total_games": 15,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Control_While",
+                "SPY_Captor_WallFront"
+            ]
+        },
+        "levels/infiltration/niveau14.xml": {
+            "completed": true,
+            "total_games": 9,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_Fog",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Captor_WallFront"
+            ]
+        },
+        "levels/infiltration/niveau15.xml": {
+            "completed": true,
+            "total_games": 12,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Control_While",
+                "SPY_Operator_Not",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau16.xml": {
+            "completed": true,
+            "total_games": 11,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Control_IfThen",
+                "SPY_Control_While",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_FieldGate"
+            ]
+        },
+        "levels/infiltration/niveau17.xml": {
+            "completed": true,
+            "total_games": 19,
+            "total_games_completed": 11,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_FieldGate",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau18.xml": {
+            "completed": true,
+            "total_games": 24,
+            "total_games_completed": 14,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_FieldGate",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau19.xml": {
+            "completed": true,
+            "total_games": 15,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_IfElse",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_And",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_Enemy",
+                "SPY_Captor_RedArea",
+                "SPY_Captor_FieldGate",
+                "SPY_Captor_Terminal",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau20.xml": {
+            "completed": true,
+            "total_games": 8,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_IfElse",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_And",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau21.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_Activate"
+            ]
+        }
+    },
+    "59B6B585": {
+        "levels/tutoriel/tutoriel.xml": {
+            "completed": true,
+            "total_games": 3,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau01.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau03.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau04.xml": {
+            "completed": true,
+            "total_games": 10,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/explorateur/niveau05.xml": {
+            "completed": true,
+            "total_games": 5,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/tutoriel/ouvrirporte.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate"
+            ]
+        },
+        "levels/explorateur/niveau06.xml": {
+            "completed": true,
+            "total_games": 6,
+            "total_games_completed": 6,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/explorateur/niveau02.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau07.xml": {
+            "completed": true,
+            "total_games": 6,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/explorateur/niveau08.xml": {
+            "completed": true,
+            "total_games": 7,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/tutoriel/nommerscript.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/collaborateur/niveau01.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/collaborateur/niveau02.xml": {
+            "completed": true,
+            "total_games": 3,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_Wait"
+            ]
+        },
+        "levels/collaborateur/niveau03.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait"
+            ]
+        },
+        "levels/collaborateur/niveau04.xml": {
+            "completed": true,
+            "total_games": 6,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait"
+            ]
+        },
+        "levels/infiltration/niveau07.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau10.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/collaborateur/niveau05.xml": {
+            "completed": true,
+            "total_games": 8,
+            "total_games_completed": 7,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait"
+            ]
+        },
+        "levels/collaborateur/niveau06.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_ActiveDoor",
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate"
+            ]
+        },
+        "levels/collaborateur/niveau07.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/tutoriel/createscript.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/collaborateur/niveau08.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate"
+            ]
+        },
+        "levels/repetiteur/niveau01.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/repetiteur/niveau02.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/repetiteur/niveau03.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnRight",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/blocklymaze/niveau04.xml": {
+            "completed": true,
+            "total_games": 5,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/repetiteur/niveau04.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/repetiteur/niveau05.xml": {
+            "completed": true,
+            "total_games": 3,
+            "total_games_completed": 3,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/repetiteur/niveau06.xml": {
+            "completed": true,
+            "total_games": 5,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_Action_MoveForward",
+                "SPY_Action_Wait",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/repetiteur/niveau07.xml": {
+            "completed": true,
+            "total_games": 16,
+            "total_games_completed": 13,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Control_ForLoop",
+                "SPY_Control_Forever"
+            ]
+        },
+        "levels/repetiteur/niveau08.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_ForLoop",
+                "SPY_Control_Forever"
+            ]
+        },
+        "levels/blocklymaze/niveau06.xml": {
+            "completed": true,
+            "total_games": 8,
+            "total_games_completed": 8,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Captor_PathLeft"
+            ]
+        },
+        "levels/infiltration/niveau14.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_Fog",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Captor_WallFront"
+            ]
+        },
+        "levels/infiltration/niveau15.xml": {
+            "completed": true,
+            "total_games": 3,
+            "total_games_completed": 3,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Control_While",
+                "SPY_Operator_Not",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/blocklymaze/niveau07.xml": {
+            "completed": true,
+            "total_games": 6,
+            "total_games_completed": 5,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Captor_PathFront",
+                "SPY_Captor_PathLeft",
+                "SPY_Captor_PathRight"
+            ]
+        }
+    },
+    "4C6ED003": {
+        "levels/infiltration/niveau01.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau02.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau03.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/tutoriel/nommerscript.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau04.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau05.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_CorrectBuggedScript",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau06.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau07.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/tutoriel/ouvrirporte.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate"
+            ]
+        },
+        "levels/infiltration/niveau09.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/infiltration/niveau10.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau11.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Control_ForLoop"
+            ]
+        },
+        "levels/infiltration/niveau12.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_ForLoop",
+                "SPY_Control_Forever"
+            ]
+        },
+        "levels/infiltration/niveau13.xml": {
+            "completed": true,
+            "total_games": 9,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Control_While",
+                "SPY_Captor_WallFront"
+            ]
+        },
+        "levels/infiltration/niveau14.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_Fog",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Captor_WallFront"
+            ]
+        },
+        "levels/infiltration/niveau15.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Control_While",
+                "SPY_Operator_Not",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau16.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Control_IfThen",
+                "SPY_Control_While",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_FieldGate"
+            ]
+        },
+        "levels/infiltration/niveau17.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_FieldGate",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau18.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_FieldGate",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau19.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_IfElse",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_And",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_Enemy",
+                "SPY_Captor_RedArea",
+                "SPY_Captor_FieldGate",
+                "SPY_Captor_Terminal",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau20.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Wait",
+                "SPY_Action_TurnBack",
+                "SPY_Control_IfThen",
+                "SPY_Control_IfElse",
+                "SPY_Control_ForLoop",
+                "SPY_Control_While",
+                "SPY_Operator_And",
+                "SPY_Operator_Or",
+                "SPY_Operator_Not",
+                "SPY_Captor_WallFront",
+                "SPY_Captor_Exit"
+            ]
+        },
+        "levels/infiltration/niveau21.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_Limited",
+                "SPY_Action_Activate"
+            ]
+        }
+    },
+    "6DFE62E7": {
+        "levels/explorateur/niveau01.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau02.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau03.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_CorrectBuggedScript",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau04.xml": {
+            "completed": true,
+            "total_games": 4,
+            "total_games_completed": 4,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/explorateur/niveau05.xml": {
+            "completed": true,
+            "total_games": 3,
+            "total_games_completed": 3,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/tutoriel/ouvrirporte.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate"
+            ]
+        },
+        "levels/explorateur/niveau06.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/infiltration/niveau01.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/explorateur/niveau07.xml": {
+            "completed": true,
+            "total_games": 3,
+            "total_games_completed": 3,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ActiveDoor",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight",
+                "SPY_Action_Activate",
+                "SPY_Action_TurnBack"
+            ]
+        },
+        "levels/infiltration/niveau02.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau03.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/tutoriel/nommerscript.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau04.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_ScriptEditable",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward"
+            ]
+        },
+        "levels/infiltration/niveau05.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_CorrectBuggedScript",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau06.xml": {
+            "completed": true,
+            "total_games": 1,
+            "total_games_completed": 1,
+            "competence": [
+                "SPY_StepByStep",
+                "SPY_Unlimited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        },
+        "levels/infiltration/niveau07.xml": {
+            "completed": true,
+            "total_games": 2,
+            "total_games_completed": 2,
+            "competence": [
+                "SPY_ScriptEditable",
+                "SPY_Limited",
+                "SPY_Action_MoveForward",
+                "SPY_Action_TurnLeft",
+                "SPY_Action_TurnRight"
+            ]
+        }
+    }
+}
