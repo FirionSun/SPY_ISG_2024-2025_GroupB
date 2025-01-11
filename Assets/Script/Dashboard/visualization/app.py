@@ -1,8 +1,23 @@
 import os
-from flask import Flask, jsonify, render_template, request
-import pandas as pd
+try:
+    from flask import Flask, jsonify, render_template, request
+except ModuleNotFoundError:
+    from subprocess import run
+
+    assert (
+        run(["pip", "install", "flask"]).returncode == 0
+    ), "Could not install flask"
+    from flask import Flask, jsonify, render_template, request
+try:
+    import pandas as pd
+except ModuleNotFoundError:
+    from subprocess import run
+
+    assert (
+        run(["pip", "install", "pandas"]).returncode == 0
+    ), "Could not install pandas"
+    import pandas as pd 
 import json
-from flask import request, jsonify
 import subprocess
 
 
@@ -280,4 +295,4 @@ def get_avg_score_data():
         return jsonify(avg_score_per_level.to_dict(orient='records'))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5050, debug=True)
+    app.run(host='127.0.0.1', port=5050, debug=True)
