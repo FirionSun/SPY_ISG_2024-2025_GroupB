@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<scenario name="Variable" desc="Dans ce scénario tu vas apprendre qu'est ce qu'une variable et à quoi sert.">
+	<level src="Levels/Variable/Niveau01.xml" name="Niveau01" />
+	<level src="Levels/Variable/Niveau02.xml" name="Niveau02" />
+	<level src="Levels/Variable/Niveau03.xml" name="Niveau03" />
+	<level src="Levels/Variable/Niveau04.xml" name="Niveau04" />
+	<level src="Levels/Variable/Niveau05.xml" name="Niveau05" />
+	<level src="Levels/Variable/Niveau06.xml" name="Niveau06" />
+	<level src="Levels/Variable/Niveau07.xml" name="Niveau07" />
+	<level src="Levels/Variable/Niveau08.xml" name="Niveau08" />
+	<level src="Levels/Variable/Niveau09.xml" name="Niveau09" />
+	<level src="Levels/Variable/Niveau10.xml" name="Niveau10" />
+	<level src="Levels/Variable/Niveau11.xml" name="Niveau11" />
+	<level src="Levels/Variable/Niveau12.xml" name="Niveau12" />
+	<level src="Levels/Variable/Niveau13.xml" name="Niveau13" />
+	<level src="Levels/Variable/Niveau14.xml" name="Niveau14" />
+	<level src="Levels/Variable/Niveau15.xml" name="Niveau15" />
+</scenario>

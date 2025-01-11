@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <level>
 	<map>
-		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
-		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
-		<line><cell value="-1" /><cell value="0" /><cell value="3" /><cell value="3" /><cell value="0" /><cell value="-1" /></line>
-		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
-		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
-		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="0" /><cell value="3" /><cell value="0" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="0" /><cell value="2" /><cell value="0" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="0" /><cell value="0" /><cell value="0" /><cell value="-1" /></line>
+		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
-	<dragdropDisabled />
-
-	<score twoStars="0" threeStars="0"/>
+	<score twoStars="0" threeStars="6750"/>
 
 	<blockLimits>
-		<blockLimit blockType="Forward" limit="0" />
+		<blockLimit blockType="Forward" limit="3" />
 		<blockLimit blockType="TurnLeft" limit="0" />
 		<blockLimit blockType="TurnRight" limit="0" />
 		<blockLimit blockType="TurnBack" limit="0" />
@@ -44,22 +44,9 @@
 		<blockLimit blockType="VarString" limit="0" />
 	</blockLimits>
 
-	<player inputLine="David" posX="3" posY="3" direction="1" />
-
-	<player inputLine="Bob" posX="2" posY="3" direction="1" />
+	<player inputLine="Bob" posX="2" posY="5" direction="0" />
 
 	<script outputLine="Bob" editMode="0" type="3">
-		<action type="Activate"/>
-		<action type="Activate"/>
-		<action type="TurnBack"/>
-		<action type="Forward"/>
-	</script>
-
-	<script outputLine="David" editMode="0" type="3">
-		<action type="Activate"/>
-		<action type="Activate"/>
-		<action type="TurnBack"/>
-		<action type="Forward"/>
 	</script>
 
 </level>

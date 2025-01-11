@@ -11,7 +11,7 @@
 
 	<dragdropDisabled />
 
-	<score twoStars="0" threeStars="0"/>
+	<score twoStars="0" threeStars="5111"/>
 
 	<blockLimits>
 		<blockLimit blockType="Forward" limit="0" />
