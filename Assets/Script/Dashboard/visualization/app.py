@@ -1,22 +1,6 @@
 import os
-try:
-    from flask import Flask, jsonify, render_template, request
-except ModuleNotFoundError:
-    from subprocess import run
-
-    assert (
-        run(["pip", "install", "flask"]).returncode == 0
-    ), "Could not install flask"
-    from flask import Flask, jsonify, render_template, request
-try:
-    import pandas as pd
-except ModuleNotFoundError:
-    from subprocess import run
-
-    assert (
-        run(["pip", "install", "pandas"]).returncode == 0
-    ), "Could not install pandas"
-    import pandas as pd 
+from flask import Flask, jsonify, render_template, request
+import pandas as pd
 import json
 import subprocess
 
