@@ -279,4 +279,4 @@ def get_avg_score_data():
         return jsonify(avg_score_per_level.to_dict(orient='records'))
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5050, debug=True)
+    app.run(host='127.0.0.1', port=5056, debug=True)
