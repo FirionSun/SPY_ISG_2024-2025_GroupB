@@ -93,6 +93,13 @@
             </select>
         </div>
 
+        <div class="text-center" style="margin-top: 20px;">
+            <button id="refresh-data-btn" class="btn btn-primary">Refresh Data</button>
+            <input id="session-id-list" type="text" placeholder="Enter session IDs, comma-separated" 
+                   style="margin-left: 10px; width: 300px;" />
+        </div>
+        
+
         <!-- Chart containers -->
         <div id="charts-container">
             <div id="chart1" class="chart-container" style="height: 400px;"></div>
@@ -145,7 +152,9 @@
         };
 
         const layout = {
-            title: 'Total Number of Launched & Completed for Each Level',
+            title: userId === 'all'
+                ? 'Total Launches and Completions per Level (Class)'
+                : 'Total Launches and Completions per Level (Selected User)',
             barmode: 'group',
             margin: { l: 50, r: 50, t: 40, b: 140 },
             xaxis: { tickangle: -45 },
@@ -225,7 +234,9 @@ function fetchAvgTimeData(userId) {
         };
 
         const layout = {
-            title: 'Average Time Spent on Each Level',
+            title: userId === 'all'
+                ? 'Average Time Spent Per Level (Class)'
+                : 'Average Time Spent Per Level (Selected User)',
             margin: { l: 50, r: 50, t: 40, b: 140 },
             xaxis: { tickangle: -45 },
             autosize: true
@@ -296,8 +307,8 @@ function fetchAvgScoreData(userId) {
 
         const layout = {
             title: userId === 'all'
-                ? 'Performance Percentage for Each Level (All Users)'
-                : 'Performance Comparison: User vs All',
+                ? ' Average Performance Percentage Per Level (Class)'
+                : 'Performance Percentage Per Level (Selected User)',
             barmode: userId === 'all' ? 'stack' : 'group',
             margin: { l: 50, r: 50, t: 40, b: 140 },
             xaxis: { tickangle: -45 },
@@ -395,7 +406,9 @@ function fetchCompetenceData(userId) {
         };
 
         const layout = {
-            title: 'Competence Comparison: User vs All',
+            title: userId === 'all'
+                ? 'Average Number of Competences Worked On (Class)'
+                : 'Competences Worked On (Selected User)',
             barmode: 'group',
             margin: {
                 l: 50,
@@ -448,6 +461,31 @@ $(document).ready(function() {
     // Default view for all users
     fetchCompetenceData('all');
 });
+    </script>
+    <script>
+        $(document).ready(function () {
+    $("#refresh-data-btn").click(function () {
+        const sessionIdInput = $("#session-id-list").val().trim();
+        const sessionIds = sessionIdInput ? sessionIdInput.split(",").map(id => id.trim()) : [];
+
+        // Call the backend API to refresh data
+        $.ajax({
+            url: "/refresh_data",
+            type: "POST",
+            contentType: "application/json", // Set Content-Type to JSON
+            data: JSON.stringify({ session_ids: sessionIds }), // Send JSON data
+            success: function (response) {
+                alert(response.message); // Notify the user of success or error
+                location.reload(); // Optionally reload the dashboard
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Error refreshing data:", textStatus, errorThrown);
+                alert("Failed to refresh data. Please try again.");
+            }
+        });
+    });
+});
+
     </script>
 </body>
 </html>

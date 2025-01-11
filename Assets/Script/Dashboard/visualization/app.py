@@ -2,6 +2,9 @@ import os
 from flask import Flask, jsonify, render_template, request
 import pandas as pd
 import json
+from flask import request, jsonify
+import subprocess
+
 
 app = Flask(__name__)
 
@@ -9,8 +12,43 @@ app = Flask(__name__)
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 # Set the path for the data folder
-data_file_path = os.path.join(project_root, 'data', 'step3_level_data_cleaned.json')
+data_file_path = os.path.join(project_root, 'data', 'step3_level_game_sessions.json')
+data_processing_path = os.path.join(project_root, 'data_processing', 'data_processing_all_in_one.py')
 level_scores_file_path = os.path.join(project_root, 'data', 'scores_per_level.json')
+
+@app.route("/refresh_data", methods=["POST"])
+def refresh_data():
+    # Debugging: Print the content type and request data
+    print(f"Content-Type: {request.content_type}")
+    print(f"Request data: {request.data}")
+
+    # Check if content type is JSON
+    if request.content_type != 'application/json':
+        return jsonify({"message": "Unsupported Media Type. Expected application/json."}), 415
+    
+    # Handle cases where the body is empty
+    try:
+        session_ids = request.json.get("session_ids", []) if request.json else []
+    except Exception as e:
+        print(f"Error parsing JSON: {e}")
+        return jsonify({"message": "Invalid JSON format."}), 400
+
+    try:
+        # Build the command for running the Python script
+        command = ["python", data_processing_path]
+        if session_ids:
+            command.extend(session_ids)
+        
+        # Debugging: Print the command being executed
+        print(f"Executing command: {command}")
+
+        # Run the script
+        subprocess.run(command, check=True)
+        
+        return jsonify({"message": "Data refreshed successfully!"}), 200
+    except Exception as e:
+        print(f"Error running script: {e}")
+        return jsonify({"message": "Failed to refresh data."}), 500
 
 # Load JSON file data
 def load_data(path):
@@ -62,7 +100,7 @@ def get_competence_data():
     user_id = request.args.get('user_id', 'all')
 
     # Load general level data file
-    general_data_path = os.path.join(project_root, 'data', 'step4_level_data_general.json')
+    general_data_path = os.path.join(project_root, 'data', 'step4_level_summary_data.json')
     general_data = load_data(general_data_path)
 
     # Initialize counters

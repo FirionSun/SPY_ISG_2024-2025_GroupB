@@ -70,11 +70,8 @@ def is_competency_match_with_level(competency, level_xml):
     # Evaluate the rule
     rule = competency["rule"]
 
-    print(f"rule: {rule}")
-
     # Check if the rule is empty
     if not rule.strip():
-        print(f"Skipping empty rule for competency: {competency['key']}")
         return False
 
     # Replace '=' with '==' to make it valid Python syntax
@@ -88,21 +85,16 @@ def is_competency_match_with_level(competency, level_xml):
     undefined_keys = re.findall(r"\\b[a-zA-Z_]+\\b", rule)
     for key in undefined_keys:
         if key not in filters_state:
-            print(f"Warning: Undefined key '{key}' in rule. Replacing it with 0.")
             rule = re.sub(rf"\\b{key}\\b", "0", rule)
 
     # Clean up extra spaces and ensure rule is valid
     rule = re.sub(r"\\s+", " ", rule).strip()
 
-    print(f"rule final: {rule}")
     if re.search(r"[a-zA-Z]+\\s[<>=]", rule):
-        print(f"Error: Invalid syntax detected in rule: {rule}")
         return False
     try:
-        print(f"Evaluating rule: {rule}")  # Debugging rule evaluation
         return eval(rule)
     except Exception as e:
-        print(f"Error evaluating rule: {rule}, error: {e}")
         return False
 
 
@@ -154,8 +146,6 @@ def process_level_data_general_with_competencies(input_file, competency_file, ou
 
             # Evaluate competencies
             for competency in competencies_data["referentials"][0]["list"]:
-                print(f"Processing competency: {competency['key']}")
-                print(f"competency all: {competency}")
                 if is_competency_match_with_level(competency, level_xml):
                     level_info["competence"].append(competency["key"])
 
