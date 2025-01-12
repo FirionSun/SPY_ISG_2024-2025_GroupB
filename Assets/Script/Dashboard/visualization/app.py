@@ -3,6 +3,8 @@ from flask import Flask, jsonify, render_template, request
 import pandas as pd
 import json
 import subprocess
+import argparse
+
 
 
 app = Flask(__name__)
@@ -279,4 +281,11 @@ def get_avg_score_data():
         return jsonify(avg_score_per_level.to_dict(orient='records'))
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5056, debug=True)
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description="Run the Flask application.")
+    parser.add_argument('--host', type=str, default='127.0.0.1', help="Host address for the Flask app (default: 127.0.0.1)")
+    parser.add_argument('--port', type=int, default=5056, help="Port for the Flask app (default: 5056)")
+    args = parser.parse_args()
+
+    # Run the Flask app with the specified host and port
+    app.run(host=args.host, port=args.port, debug=True)
