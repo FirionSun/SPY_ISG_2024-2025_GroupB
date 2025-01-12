@@ -8,6 +8,10 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Un robot à chacun un nom spécifique, tu peux le voir en pointant le curseur sur le robot.&#xA;Tu pourras donner un ordre au robot que tu veux en spécifiant le nom dans la zone de texte au-dessus de a zone d'édition." img="nomrobot.png"/>
+	</dialogs>
+
 	<score twoStars="0" threeStars="6750"/>
 
 	<blockLimits>

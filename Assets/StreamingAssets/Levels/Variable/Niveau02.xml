@@ -11,6 +11,12 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Le robot est intelligent, tu peut donner plusieurs actions dans un ordre." img="stackActions.png"/>
+	</dialogs>
+
+	<executionLimit amount="1" />
+
 	<score twoStars="0" threeStars="6750"/>
 
 	<blockLimits>

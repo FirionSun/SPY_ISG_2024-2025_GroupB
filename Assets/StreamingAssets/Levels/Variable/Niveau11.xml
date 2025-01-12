@@ -15,6 +15,10 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Les informations de type booléan est plus délicat que les autres types. Le robot ne pourra stocker que la dernière valeur du bloc de type booléan exécutée."/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="4249"/>
 
 	<blockLimits>
@@ -62,7 +66,7 @@
 
 	<player inputLine="Bob" posX="2" posY="9" direction="0" />
 
-	<script outputLine="Nom" editMode="2" type="3">
+	<script outputLine="Script1" editMode="2" type="3">
 	</script>
 
 </level>

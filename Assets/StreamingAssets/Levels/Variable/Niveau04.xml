@@ -12,6 +12,11 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Tu as maintenant des nouveaux blocs dans l'inventaire.&#xA;Ces blocs serviront pour faire tourner le robot." img="turnleftright.png"/>
+		<dialog text="Attention !&#xA;Quand le robot tourne, il reste sur place." />
+	</dialogs>
+
 	<score twoStars="0" threeStars="4666"/>
 
 	<blockLimits>

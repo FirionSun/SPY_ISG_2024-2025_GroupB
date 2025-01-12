@@ -9,6 +9,10 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Bravo! Tu as compris qu'est ce qu'une variable et à quoi sert.&#xA;Les robots te saluent aussi."/>
+  	</dialogs>
+
 	<dragdropDisabled />
 
 	<score twoStars="0" threeStars="5111"/>

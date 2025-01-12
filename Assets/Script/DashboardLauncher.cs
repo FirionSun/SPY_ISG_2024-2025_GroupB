@@ -10,7 +10,7 @@ public class DashboardLauncher : MonoBehaviour
     private string flaskScriptRelativePath = "/Script/Dashboard/visualization/app.py";
 
     // Local URL where the Flask app is hosted
-    private string flaskUrl = "http://127.0.0.1:5056";
+    private string flaskUrl = "http://192.168.251.195:5056";
 
     // Method triggered when the button is clicked
     public void OnButtonClick()
@@ -25,7 +25,7 @@ public class DashboardLauncher : MonoBehaviour
     // Method to run the command in the terminal
     private void RunCommand()
 {
-    string flaskScriptPath = Application.dataPath + flaskScriptRelativePath;
+     string flaskScriptPath = "/Users/romai/Documents/MIPI/M2/ISG/SPY_ISG_2024-2025_GroupB/Assets/Script/Dashboard/visualization/app.py";
 
     UnityEngine.Debug.Log($"Running command: {flaskCommand} {flaskScriptPath}");
 

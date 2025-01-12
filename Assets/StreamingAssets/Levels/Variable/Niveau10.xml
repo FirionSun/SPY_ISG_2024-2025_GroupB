@@ -13,6 +13,11 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Dans ce niveau on va introduire le type booléan.&#xA;Une variable de type booléan sert à stocker une information de True ou de False."/>
+		<dialog text="Dans ce scénario on utilisera le bloc bleu pour instancier une variable de type booléan avec la valeur écrite dans la zone de texte.&#xA;Comparé au type string, la variable de type booléan peut être instancier qu'avec une valeur True ou False." img="varBool.png"/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="4875"/>
 
 	<blockLimits>
@@ -41,8 +46,8 @@
 		<blockLimit blockType="FieldGate" limit="0" />
 		<blockLimit blockType="Terminal" limit="0" />
 		<blockLimit blockType="Exit" limit="0" />
-		<blockLimit blockType="VarInt" limit="1" />
-		<blockLimit blockType="VarBool" limit="0" />
+		<blockLimit blockType="VarInt" limit="0" />
+		<blockLimit blockType="VarBool" limit="1" />
 		<blockLimit blockType="VarString" limit="0" />
 	</blockLimits>
 
@@ -54,7 +59,7 @@
 
 	<player inputLine="Bob" posX="2" posY="7" direction="0" />
 
-	<script outputLine="Nom" editMode="2" type="3">
+	<script outputLine="Script1" editMode="2" type="3">
 	</script>
 
 </level>

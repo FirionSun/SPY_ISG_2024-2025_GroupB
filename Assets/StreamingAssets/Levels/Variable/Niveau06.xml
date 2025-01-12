@@ -13,6 +13,14 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Tu as compris comment faire bouger le robot, on vas commencer à introduire la notion variable."/>
+		<dialog text="Une variable sert à stocker une information associée avec un type et une valeur.&#xA;Dans ce niveau on va introduire le type int.&#xA;Un type int est aussi dit un type entier, elle sert à stocker un entier relatif."/>
+		<dialog text="Dans ce scénario on utilisera le bloc rouge pour instancier une variable de type int avec la valeur écrite dans la zone de texte." img="varInt.png"/>
+		<dialog text="Pour pouvoir l'utiliser on utilisera l'action activer.&#xA;Ce bloc sera utiliser devant un terminal pour ouvrir un ou plusieurs portes." img="activer.png"/>
+		<dialog text="Chaque terminal à besoin d'une variable défini que l'on pourra voir en pointant le terminal. Le bloc variable doit être donc exécuter avant de faire l'action activer." img="infoterminal.png"/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="4875"/>
 
 	<blockLimits>
@@ -54,7 +62,7 @@
 
 	<player inputLine="Bob" posX="2" posY="7" direction="0" />
 
-	<script outputLine="Nom" editMode="2" type="3">
+	<script outputLine="Script1" editMode="2" type="3">
 	</script>
 
 </level>

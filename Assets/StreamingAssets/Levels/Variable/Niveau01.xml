@@ -9,6 +9,13 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Bienvenue dans le scénario Variable!&#xA;Dans ce scénario tu vas apprendre qu'est qu'une variable et à quoi ça sert à travers SPY.&#xA;Ton objectif sera de déplacer le robot vers le téléporteur rouge." img="sortie.png"/>
+		<dialog text="Pour donner un ordre au robot, tu fais glisser un bloc dans l'inventaire vers la zone d'édition." img="drophere.png"/>
+		<dialog text="Il se peut que tu t'es tompé de bloc à donner au robot.&#xA;Pour supprimer le bloc correspondant il suffit de le glisser en dehors de la zone d'édition." img="suppression.png"/>
+		<dialog text="Maintenant c'est à toi de jouer!&#xA;Donne un ordre au robot pour qu'il avance vers la sortie." />
+	</dialogs>
+
 	<score twoStars="0" threeStars="10500"/>
 
 	<blockLimits>

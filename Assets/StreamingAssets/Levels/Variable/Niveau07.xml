@@ -18,6 +18,10 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Un robot peut stocker plusieurs valeurs de int.&#xA;Si tu ne te rappelle plus quelles valeurs tu avais instancier auparavant, tu peux pointer le robot pour voir les valeurs dans sa mémoire." img="robotmemoire.png"/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="4294"/>
 
 	<blockLimits>
@@ -71,7 +75,7 @@
 
 	<player inputLine="Bob" posX="2" posY="12" direction="0" />
 
-	<script outputLine="Nom" editMode="2" type="3">
+	<script outputLine="Script1" editMode="2" type="3">
 	</script>
 
 </level>

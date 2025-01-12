@@ -14,6 +14,11 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Stocker plusieurs variables dans un robot n'est pas toujours une bonne solution.&#xA; On a un autre robot pour partager les informations."/>
+		<dialog text="Lorsqu'un robot attend l'autre qui ouvre une porte, on peut utiliser le bloc wait avec la condition tant qu'il y a une porte fermée devant lui." img="wait.png"/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="3530"/>
 
 	<blockLimits>

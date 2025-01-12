@@ -14,6 +14,10 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Comme pour une variable de type int, on stocker plusieurs valeurs de string."/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="3882"/>
 
 	<blockLimits>
@@ -61,7 +65,7 @@
 
 	<door posX="6" posY="5" slotId="0" direction="0" />
 
-	<script outputLine="Nom" editMode="2" type="3">
+	<script outputLine="Script1" editMode="2" type="3">
 	</script>
 
 </level>

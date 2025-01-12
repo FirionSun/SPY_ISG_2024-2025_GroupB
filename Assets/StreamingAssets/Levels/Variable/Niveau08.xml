@@ -13,6 +13,11 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Dans ce niveau on va introduire le type string.&#xA;Une variable de type string sert à stocker une chaîne de caractères."/>
+		<dialog text="Dans ce scénario on utilisera le bloc vert pour instancier une variable de type string avec la valeur écrite dans la zone de texte.&#xA;L'utilisation sera le même qu'une variable de type int." img="varString.png"/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="4875"/>
 
 	<blockLimits>
@@ -54,7 +59,7 @@
 
 	<player inputLine="Bob" posX="2" posY="7" direction="0" />
 
-	<script outputLine="Nom" editMode="2" type="3">
+	<script outputLine="Script1" editMode="2" type="3">
 	</script>
 
 </level>

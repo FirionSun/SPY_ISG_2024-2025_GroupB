@@ -11,18 +11,22 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Si tu essayes de faire ce niveau avec seulement les blocs des niveaux précédents, tu devras utiliser beaucoup de blocs. Nous allons maintenant utiliser le bloc boucle pour répeter plusieurs fois les actions!&#xA;Par exemple l'ordre en dessous sert à avancer 2 cases." img="forExample.png"/>
+  	</dialogs>
+
 	<score twoStars="0" threeStars="4785"/>
 
 	<blockLimits>
-		<blockLimit blockType="Forward" limit="0" />
+		<blockLimit blockType="Forward" limit="4" />
 		<blockLimit blockType="TurnLeft" limit="0" />
-		<blockLimit blockType="TurnRight" limit="0" />
+		<blockLimit blockType="TurnRight" limit="1" />
 		<blockLimit blockType="TurnBack" limit="0" />
 		<blockLimit blockType="Activate" limit="0" />
 		<blockLimit blockType="Wait" limit="0" />
 		<blockLimit blockType="IfThen" limit="0" />
 		<blockLimit blockType="IfElse" limit="0" />
-		<blockLimit blockType="ForLoop" limit="0" />
+		<blockLimit blockType="ForLoop" limit="1" />
 		<blockLimit blockType="While" limit="0" />
 		<blockLimit blockType="Forever" limit="0" />
 		<blockLimit blockType="AndOperator" limit="0" />
@@ -47,13 +51,6 @@
 	<player inputLine="Bob" posX="2" posY="5" direction="0" />
 
 	<script outputLine="Script1" editMode="2" type="3">
-		<for nbFor="0">
-			<action type="Forward"/>
-			<action type="Forward"/>
-			<action type="Forward"/>
-			<action type="TurnRight"/>
-		</for>
-		<action type="Forward"/>
 	</script>
 
 </level>

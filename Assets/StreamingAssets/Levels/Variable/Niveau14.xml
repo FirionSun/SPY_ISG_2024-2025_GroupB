@@ -13,6 +13,10 @@
 		<line><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /><cell value="-1" /></line>
 	</map>
 
+	<dialogs>
+		<dialog text="Ce niveau est difficile! Tu auras besoin d'utiliser toutes les notions que tu as appris pendant la scénario."/>
+	</dialogs>
+
 	<score twoStars="0" threeStars="3304"/>
 
 	<blockLimits>
